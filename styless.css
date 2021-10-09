@@ -1,0 +1,292 @@
+/* Colors */
+:root {
+  /* ### Primary */
+  --Blue: hsl(246, 80%, 60%);
+  --Light-red-work: hsl(15, 100%, 70%);
+  --Soft-blue-play: hsl(195, 74%, 62%);
+  --Light-red-study: hsl(348, 100%, 68%);
+  --Lime-green-exercise: hsl(145, 58%, 55%);
+  --Violet-social: hsl(264, 64%, 52%);
+  --Soft-orange-self-care: hsl(43, 84%, 65%);
+
+  /* ### Neutral */
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Pale-Blue: hsl(236, 100%, 87%);
+}
+.active {
+  color: var(--Pale-Blue);
+}
+
+/* Settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Very-dark-blue);
+}
+
+/* Main Container  */
+main {
+  width: 80%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1rem;
+  /* display: flex;
+  column-gap: 1rem; */
+}
+
+/* Jeremy Container */
+.jeremy-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.jeremy-container-top {
+  background-color: var(--Blue);
+  padding: 2rem 0rem 2.7rem 1rem;
+  color: var(--Pale-Blue);
+  border-radius: 10px;
+  z-index: 5;
+}
+
+.jeremy-img {
+  width: 70px;
+  height: 70px;
+  border: 3px solid var(--Pale-Blue);
+  border-radius: 50%;
+}
+
+.jeremy-report {
+  font-size: 15px;
+  padding-top: 1rem;
+}
+
+.jeremy-name {
+  font-weight: 500;
+  width: 200px;
+  margin-top: 10px;
+}
+
+.jeremy-container-bottom {
+  padding: 2rem 1rem 1rem 1rem;
+  margin-top: -1rem;
+  background-color: var(--Dark-blue);
+  color: var(--Desaturated-blue);
+  border-radius: 0 0 10px 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 0.2rem;
+}
+
+li:hover {
+  color: var(--Pale-Blue);
+  cursor: pointer;
+}
+
+/* Boxes  */
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.box-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem 0.5rem 0;
+  margin-bottom: -0.5rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.box-icon div {
+  opacity: 0;
+}
+
+.work {
+  background-color: var(--Light-red-work);
+}
+
+.play {
+  background-color: var(--Soft-blue-play);
+}
+
+.study {
+  background-color: var(--Light-red-study);
+}
+
+.exercise {
+  background-color: var(--Lime-green-exercise);
+}
+
+.social {
+  background-color: var(--Violet-social);
+}
+
+.self-care {
+  background-color: var(--Soft-orange-self-care);
+}
+
+.box-icon img {
+  width: 35px;
+  height: 35px;
+}
+
+.activity-container {
+  background-color: var(--Dark-blue);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.activity-container:hover {
+  background-color: hsl(235, 42%, 34%);
+  cursor: pointer;
+}
+
+.activity-container div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.activity-container img {
+  width: 25px;
+}
+
+.activity-container img:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.activity {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.hours {
+  color: #fff;
+  font-size: 32.5px;
+  font-weight: 300;
+  margin-top: 30px;
+}
+
+.last-week-hours {
+  color: var(--Pale-Blue);
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+@media (max-width: 920px) and (min-width: 601px) {
+  .boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .jeremy-container-top {
+    padding: 2rem 1rem 3rem 1rem;
+  }
+
+  .jeremy-report {
+    margin-top: 2rem;
+  }
+
+  .jeremy-name {
+    font-size: 32px;
+    margin-bottom: 2rem;
+  }
+
+  .jeremy-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .jeremy-container-bottom {
+    padding: 3rem 1rem;
+  }
+
+  li {
+    font-size: 20px;
+    padding: 0.4rem;
+  }
+}
+
+@media (max-width: 735px) and (min-width: 646px) {
+  main {
+    width: 90%;
+  }
+}
+
+@media (max-width: 645px) and (min-width: 621px) {
+  main {
+    width: 95%;
+  }
+}
+
+@media (max-width: 620px) and (min-width: 300px) {
+  body {
+    padding: 4rem 2rem;
+    height: 250vh;
+    align-items: center;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    column-gap: 0;
+    width: 95%;
+  }
+
+  .boxes {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 2rem;
+  }
+
+  .jeremy-container-top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .jeremy-report {
+    width: 50px;
+    padding-left: 1rem;
+  }
+
+  .jeremy-name {
+    width: 100px;
+    font-size: 28px;
+    padding-left: 1.8rem;
+  }
+
+  .jeremy-container-bottom {
+    padding: 2rem 2rem 1rem 2rem;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
